@@ -5,7 +5,7 @@ using namespace std;
 string findnext(string binary, long n)
 {
         long i;
-        for(i=n-1;i>0;i--)
+        for(i=n-1;i>=0;i--)
         {
             if(binary[i]=='0')
                 break;
@@ -19,7 +19,7 @@ string findnext(string binary, long n)
 string findprev(string binary, long n)
 {
         long i;
-        for(i=n-1;i>0;i--)
+        for(i=n-1;i>=0;i--)
         {
             if(binary[i]=='1')
                 break;
@@ -43,7 +43,7 @@ int main()
         if(binary[i]=='1')
             countofone++;
     }
-    if(countofone==1 || countofone==n)
+    if(countofone==n || countofone==0)
     {
         cout<<-1;
     }
