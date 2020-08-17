@@ -8,20 +8,16 @@ int main()
     cin>>n>>r>>x>>y;
     long change=0;
     bool c[n];
-    bool s[n];
+    bool s;
     for(long i=0; i<n;i++)
     {
         cin>>c[i];
     }
     for(long i=0;i<n;i++)
     {
-        cin>>s[i];
-    }
-
-    for(long i=0;i<n;i++)
-    {
-        if(c[i]&&s[i]) change+=x;
-        else if(c[i]==1 && s[i]==0) change-=y;
+        cin>>s;
+        if(c[i]&&s) change+=x;
+        else if(c[i]==1 && s==0) change-=y;
     }
 
     if(change>0) cout<<"promoted";
